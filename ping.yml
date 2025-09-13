@@ -1,0 +1,11 @@
+name: Ping Service
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # Runs every 10 minutes
+  workflow_dispatch:       # Allows manual triggering
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render
+        run: curl https://calculator-bot-8w9.onrender.com/
